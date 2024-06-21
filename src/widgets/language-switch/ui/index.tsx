@@ -16,6 +16,7 @@ import { type Locale, locales } from "@/shared/libs/next-intl/config";
 // Assets
 import RussianFlagIcon from "@/assets/icons/ru.svg"
 import UnitedKingdomFlagIcon from "@/assets/icons/gb.svg"
+import { Button } from "@/shared/ui/button";
 
 const localesList = {
   en: {
@@ -23,7 +24,7 @@ const localesList = {
     code: "en",
     name: (
       <div className="flex flex-row items-center justify-center gap-2">
-        <Image width={16} height={16} src={UnitedKingdomFlagIcon} alt="United Kingdom Flag Icon" />
+        <Image width={16} src={UnitedKingdomFlagIcon} alt="United Kingdom Flag Icon" />
         English
       </div>
     ),
@@ -33,7 +34,7 @@ const localesList = {
     code: "ru",
     name: (
       <div className="flex flex-row items-center justify-center gap-2">
-        <Image width={16} height={16} src={RussianFlagIcon} alt="Russian Flag Icon" />
+        <Image width={16} src={RussianFlagIcon} alt="Russian Flag Icon" />
         Русский
       </div>
     ),
@@ -49,8 +50,10 @@ export const LanguageSwitch = () => {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger>
-        {localesList[locale as Locale].name}
+      <DropdownMenuTrigger asChild>
+        <Button variant="ghost">
+          {localesList[locale as Locale].name}
+        </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         {

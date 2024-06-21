@@ -1,3 +1,4 @@
+// Basics
 import Link, { type LinkProps } from "next/link"
 import { ReactNode } from "react"
 
@@ -10,7 +11,7 @@ export const HeaderItem = ({ children, selected, ...props }: LinkProps & { child
     {...props}
     data-selected={selected ? "selected" : "not"}
     className={cn(
-      "relative group text-foreground transition-all duration-300 ease-in-out rounded-full data-[selected=selected]:bg-accent py-2.5 px-5",
+      "relative group text-foreground transition-all duration-300 ease-in-out rounded-full data-[selected=selected]:bg-gray-200 data-[selected=selected]:bg-opacity-5 py-2.5 px-5",
       props.className
     )}
   >
@@ -33,7 +34,7 @@ export const HeaderItem = ({ children, selected, ...props }: LinkProps & { child
 
     {/* Background gradient with reduced opacity on hover when selected */}
     {selected && (
-      <span className="absolute inset-0 z-0 bg-gradient-to-r from-primary to-secondary opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-20 rounded-full"></span>
+      <span className="absolute inset-0 z-0 bg bg-gradient-to-r from-primary to-secondary opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-20 rounded-full"></span>
     )}
 
     {/* Underline smoothly showing on hover */}

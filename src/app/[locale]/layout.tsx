@@ -9,6 +9,9 @@ import { NextIntlClientProvider } from "next-intl";
 import { TooltipProvider } from "@/shared/ui/tooltip";
 import { Toaster } from "@/shared/ui/toaster";
 
+// Main
+import { SectionProvider } from "@/main/providers/section-provider";
+
 // Shared
 import type { Locale } from "@/shared/libs/next-intl/config";
 import { cn } from "@/shared/utils/cn";
@@ -42,8 +45,10 @@ export default async function RootLayout({
       <body className={cn("dark", inter.className)}>
         <NextIntlClientProvider messages={messages}>
           <TooltipProvider>
-            {children}
-            <Toaster />
+            <SectionProvider>
+              {children}
+              <Toaster />
+            </SectionProvider>
           </TooltipProvider>
         </NextIntlClientProvider>
       </body>
