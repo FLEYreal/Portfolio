@@ -1,9 +1,24 @@
 {
+  "default": {
+    "copied-to-clipboard": "Copied to Clipboard"
+  },
   "metadata": {
     "title": "FLEY's Portfolio",
     "description": "Personal Portfolio Page of FLEY"
   },
   "header": {
-    "home": "Home"
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "experience": "Experience"
+  },
+  "contacts": {
+    "copy": "Copy",
+    "contacts": "Contacts",
+    "telegram": "Telegram",
+    "discord": "Discord",
+    "github": "Github",
+    "phone-number": "Phone Number",
+    "email": "Email"
   }
 }

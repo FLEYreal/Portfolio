@@ -1,17 +1,13 @@
-"use client"
-
-// Libs
-import { useTranslations } from "next-intl";
-
 // Insides
 import "./globals.css"
 
-export default function Home() {
-  const t = useTranslations("header");
+// Blocks
+import { Header } from "@/blocks/header";
 
+export default function Home() {
   return (
-    <main>
-      {t("home")}
-    </main>
+    <>
+      <Header />
+    </>
   );
 }

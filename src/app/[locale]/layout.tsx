@@ -5,6 +5,10 @@ import { Inter } from "next/font/google";
 import { getMessages, getTranslations } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 
+// UI
+import { TooltipProvider } from "@/shared/ui/tooltip";
+import { Toaster } from "@/shared/ui/toaster";
+
 // Shared
 import type { Locale } from "@/shared/libs/next-intl/config";
 import { cn } from "@/shared/utils/cn";
@@ -34,10 +38,13 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body className={cn("dark", inter.className)}>
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <TooltipProvider>
+            {children}
+            <Toaster />
+          </TooltipProvider>
         </NextIntlClientProvider>
       </body>
     </html>

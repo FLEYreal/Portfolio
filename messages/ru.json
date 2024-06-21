@@ -1,9 +1,24 @@
 {
+  "default": {
+    "copied-to-clipboard": "Скопировано в Буфер Обмена"
+  },
   "metadata": {
     "title": "Портфолио FLEY",
     "description": "Персональная Страница с Портфолио FLEY"
   },
   "header": {
-    "home": "Дом"
+    "home": "Дом",
+    "about": "Обо Мне",
+    "portfolio": "Портфолио",
+    "experience": "Опыт"
+  },
+  "contacts": {
+    "copy": "Скопировать",
+    "contacts": "Контакты",
+    "telegram": "Телеграм",
+    "discord": "Дискорд",
+    "github": "Github",
+    "phone-number": "Номер Телефона",
+    "email": "Почта"
   }
 }
