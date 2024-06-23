@@ -9,6 +9,7 @@ import { useLocale } from "next-intl";
 
 // UI
 import { DropdownMenu, DropdownMenuContent, DropdownMenuCheckboxItem, DropdownMenuTrigger } from "@/shared/ui/dropdown-menu";
+import { Button, ButtonProps } from "@/shared/ui/button";
 
 // Shared
 import { type Locale, locales } from "@/shared/libs/next-intl/config";
@@ -16,7 +17,6 @@ import { type Locale, locales } from "@/shared/libs/next-intl/config";
 // Assets
 import RussianFlagIcon from "@/assets/icons/ru.svg"
 import UnitedKingdomFlagIcon from "@/assets/icons/gb.svg"
-import { Button } from "@/shared/ui/button";
 
 const localesList = {
   en: {
@@ -41,7 +41,7 @@ const localesList = {
   },
 }
 
-export const LanguageSwitch = () => {
+export const LanguageSwitch = ({ ...props }: ButtonProps) => {
   // Default Setup
   const router = useRouter();
 
@@ -51,7 +51,7 @@ export const LanguageSwitch = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost">
+        <Button variant="ghost" {...props}>
           {localesList[locale as Locale].name}
         </Button>
       </DropdownMenuTrigger>

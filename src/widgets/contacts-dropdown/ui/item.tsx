@@ -12,10 +12,12 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "@/shared/ui/tooltip";
 
 // Shared
 import { useCopy } from "@/shared/utils/use-copy";
+import { useBreakpoint } from "@/shared/utils/use-breakpoints";
 
 export const ContactsDropdownItem = ({ link, text, title, newTab = true }: { link: string; text: string; title: string; newTab?: boolean }) => {
   // Default setup
   const t = useTranslations("contacts");
+  const { isMd } = useBreakpoint("md");
   const { copy } = useCopy();
 
   return <div className="flex flex-row w-full items-center justify-between gap-6 px-2.5 py-2">
@@ -25,7 +27,7 @@ export const ContactsDropdownItem = ({ link, text, title, newTab = true }: { lin
       <span className="text-gray-400 ml-1">({title})</span>
     </Link>
 
-    <Tooltip>
+    {isMd && <Tooltip>
       {/** Button to copy ID */}
       <TooltipTrigger asChild>
         <button className="text-gray-300 hover:text-white transition-colors duration-100 ease-in-out" onClick={() => copy(text)}>
@@ -35,6 +37,6 @@ export const ContactsDropdownItem = ({ link, text, title, newTab = true }: { lin
   
       {/** Tooltip to elaborate what button does */}
       <TooltipContent>{t("copy")}</TooltipContent>
-    </Tooltip>
+    </Tooltip>}
   </div>
 }
