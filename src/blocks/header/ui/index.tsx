@@ -1,10 +1,15 @@
+"use client"
+
+// Basics
+import dynamic from 'next/dynamic';
+
 // UI
 import { Separator } from "@/shared/ui/separator";
 
 // Insides
-import { HeaderNavigator } from "./navigator";
+const HeaderNavigator = dynamic(() => import('./navigator').then((module) => module.HeaderNavigator), { ssr: false });
+const HeaderMenu = dynamic(() => import("./menu").then((module) => module.HeaderMenu), { ssr: false })
 import { HeaderScrollBar } from "./scroll-bar";
-import { HeaderMenu } from "./menu";
 
 export const Header = () => {
   return (

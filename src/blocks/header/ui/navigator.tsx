@@ -18,6 +18,7 @@ import { HeaderItem } from "./item";
 import { LanguageSwitch } from "@/widgets/language-switch";
 
 // Shared
+import { useMount } from "@/shared/utils/use-mount";
 import { useSectionContext } from "@/shared/utils/use-section-context";
 import { useBreakpoint } from "@/shared/utils/use-breakpoints";
 
