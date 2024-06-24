@@ -30,7 +30,7 @@ export const ContactsDropdownItem = ({ link, text, title, newTab = true }: { lin
     {isMd && <Tooltip>
       {/** Button to copy ID */}
       <TooltipTrigger asChild>
-        <button className="text-gray-300 hover:text-white transition-colors duration-100 ease-in-out" onClick={() => copy(text)}>
+        <button type="button" className="text-gray-300 hover:text-white transition-colors duration-100 ease-in-out" onClick={() => copy(text)}>
           <CopyIcon size="18" />
         </button>
       </TooltipTrigger>

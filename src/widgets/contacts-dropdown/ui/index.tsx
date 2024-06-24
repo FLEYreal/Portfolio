@@ -9,12 +9,8 @@ import { Button } from "@/shared/ui/button";
 import { ChevronDown } from "lucide-react";
 import { ContactsDropdownItem } from "./item";
 
-// My Nametags / Ids in social media / messangers
-const telegramId = "DuckWatchingAirplane"
-const discordId = "fley0609"
-const githubId = "FLEYreal"
-const email = "borisov.nikita.off@gmail.com"
-const phone = "89500664032";
+// Shared
+import { discordId, email, githubId, phone, telegramId } from "@/shared/config/contacts";
 
 /** Dropdown with options to contact me */
 export const ContactsDropdown = () => {
@@ -24,7 +20,7 @@ export const ContactsDropdown = () => {
   return (
     <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" className="text-md flex flex-row gap-2 items-center justify-center text-slate-400">
+          <Button type="button" variant="ghost" className="text-md flex flex-row gap-2 items-center justify-center text-slate-400">
             {t("contacts")}
             <ChevronDown size="16" />
           </Button>

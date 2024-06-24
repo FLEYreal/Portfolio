@@ -42,7 +42,7 @@ export const HeaderNavigator = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon">
+        <Button variant="ghost" size="icon" type="button">
           <MenuIcon />
         </Button>
       </DropdownMenuTrigger>

@@ -1,10 +1,13 @@
+// Basics
+import dynamic from "next/dynamic";
+
 // UI
 import { Separator } from "@/shared/ui/separator";
 
 // Insides
 import { Avatar } from "./avatar";
-import { Description } from "./description";
 import { More } from "./more";
+const Description = dynamic(() => import("./description").then((module) => module.Description), { ssr: false });
 
 export const HomeContent = () => {
   return (

@@ -51,7 +51,7 @@ export const LanguageSwitch = ({ ...props }: ButtonProps) => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" {...props}>
+        <Button type="button" variant="ghost" {...props}>
           {localesList[locale as Locale].name}
         </Button>
       </DropdownMenuTrigger>

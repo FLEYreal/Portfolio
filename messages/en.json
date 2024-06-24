@@ -24,8 +24,13 @@
   "home": {
     "its-my-website": "It's my website",
     "description-p1": "Passionate Full-Stack developer from Russia with 2+ years of experience building",
-    "description-p2": "marketable and high-performance",
+    "description-p2": "selling and high-performance",
     "description-p3": "applications!",
     "more": "More"
+  },
+  "about": {
+    "tech-stack": "Tech Stack",
+    "contacts": "Contacts",
+    "russia": "Russia"
   }
 }

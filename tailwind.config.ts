@@ -132,6 +132,7 @@ const config = {
         lineAppearance: {
           '0%': {
             height: "0vh",
+            opacity: "0",
             borderBottom: "1px solid rgba(203, 213, 225, 1)",
             borderTop: "1px solid rgba(203, 213, 225, 1)"
           },
@@ -140,6 +141,7 @@ const config = {
             borderTop: "1px solid rgba(203, 213, 225, 0)"
           },
           "100%": {
+            opacity: "1",
             height: "100vh"
           }
         }
