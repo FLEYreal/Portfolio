@@ -33,11 +33,15 @@ const config = {
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "var(--primary)",
-          foreground: "var(--primary-foreground)"
+          foreground: "var(--primary-foreground)",
+          dark: "var(--primary-dark)",
+          "dark-foreground": "var(--primary-dark-foreground)",
         },
         secondary: {
           DEFAULT: "var(--secondary)",
           foreground: "var(--secondary-foreground)",
+          dark: "var(--secondary-dark)",
+          "dark-foreground": "var(--secondary-dark-foreground)",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -125,6 +129,20 @@ const config = {
             background: 'rgba(0, 0, 0, 0)',
           },
         },
+        lineAppearance: {
+          '0%': {
+            height: "0vh",
+            borderBottom: "1px solid rgba(203, 213, 225, 1)",
+            borderTop: "1px solid rgba(203, 213, 225, 1)"
+          },
+          "75%": {
+            borderBottom: "1px solid rgba(203, 213, 225, 0)",
+            borderTop: "1px solid rgba(203, 213, 225, 0)"
+          },
+          "100%": {
+            height: "100vh"
+          }
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -136,6 +154,7 @@ const config = {
         fifth: "moveInCircle 20s ease infinite",
         spotlight: "spotlight 2s ease .75s 1 forwards",
         backgroundOpacity: 'backgroundOpacity 1.75s ease-in-out',
+        lineAppearance: 'lineAppearance 1.75s ease-in-out',
       },
     },
   },
@@ -158,6 +177,18 @@ const config = {
           "bg-dot": (value: any) => ({
             backgroundImage: `url("${svgToDataUri(
               `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="1.6257413380501518"></circle></svg>`
+            )}")`,
+          }),
+        },
+        { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
+      );
+    },
+    function ({ matchUtilities, theme }: any) {
+      matchUtilities(
+        {
+          "bg-dot-thick": (value: any) => ({
+            backgroundImage: `url("${svgToDataUri(
+              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="2.5"></circle></svg>`
             )}")`,
           }),
         },

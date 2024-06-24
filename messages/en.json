@@ -23,7 +23,9 @@
   },
   "home": {
     "its-my-website": "It's my website",
-    "description": "Passionate Full-Stack developer from Russia with 2+ years of experience marketable and high-performance applications!",
+    "description-p1": "Passionate Full-Stack developer from Russia with 2+ years of experience building",
+    "description-p2": "marketable and high-performance",
+    "description-p3": "applications!",
     "more": "More"
   }
 }

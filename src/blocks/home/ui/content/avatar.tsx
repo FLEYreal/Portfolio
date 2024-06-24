@@ -5,7 +5,7 @@ import Image from "next/image"
 import { getTranslations } from "next-intl/server"
 
 // Assets
-import AvatarImage from "@/assets/images/avatar.jpg"
+import AvatarImage from "@/assets/images/avatar.webp"
 
 export const Avatar = async () => {
   const t = await getTranslations("home");

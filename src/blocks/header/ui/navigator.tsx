@@ -38,6 +38,7 @@ export const HeaderNavigator = () => {
       <HeaderItem href="#experience" selected={section === "experience"}>{t("experience")}</HeaderItem>
     </>
   )
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
