@@ -7,7 +7,7 @@ import { Home } from "@/blocks/home";
 
 export default function HomePage() {
   return (
-    <main className="w-full flex flex-row justify-center">
+    <main className="w-full flex flex-col justify-center">
       <Header />
       <Home />
     </main>

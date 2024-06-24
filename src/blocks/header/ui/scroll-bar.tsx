@@ -15,7 +15,7 @@ export const HeaderScrollBar = () => {
   const updateProgress = () => {
     let height = document.body.scrollHeight - window.innerHeight;
     let scrollPosition = document.documentElement.scrollTop;
-    setProgress(Math.round((scrollPosition / height) * 100));
+    setProgress((scrollPosition / height) * 100);
   }
 
   // Update progress on scroll

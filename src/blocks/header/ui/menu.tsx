@@ -12,9 +12,9 @@ export const HeaderMenu = () => {
   const { isMd } = useBreakpoint("md");
 
   return (
-    <div className="flex flex-row gap-2">
+    <>
       <ContactsDropdown />
       {isMd && <LanguageSwitch />}
-    </div>
+    </>
   )
 }

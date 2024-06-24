@@ -31,12 +31,12 @@ export const HeaderNavigator = () => {
   const { isMd } = useBreakpoint("md");
 
   if (isMd) return (
-    <nav className="flex flex-row gap-1 items-center justify-center">
+    <>
       <HeaderItem href="#home" selected={section === "home"}>{t("home")}</HeaderItem>
       <HeaderItem href="#about" selected={section === "about"}>{t("about")}</HeaderItem>
       <HeaderItem href="#portfolio" selected={section === "portfolio"}>{t("portfolio")}</HeaderItem>
       <HeaderItem href="#experience" selected={section === "experience"}>{t("experience")}</HeaderItem>
-    </nav>
+    </>
   )
   return (
     <DropdownMenu>
