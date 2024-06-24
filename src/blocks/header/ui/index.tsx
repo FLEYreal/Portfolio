@@ -13,7 +13,7 @@ import { HeaderScrollBar } from "./scroll-bar";
 
 export const Header = () => {
   return (
-    <header className="z-50 flex flex-row-reverse md:flex-row items-center justify-center gap-4 border-b-[2px] fixed top-0 left-0 w-full h-16 bg-background backdrop-blur-md">
+    <header className="px-6 z-50 flex flex-row-reverse md:flex-row items-center md:justify-center gap-4 border-b-[2px] fixed top-0 left-0 w-full h-16 bg-background backdrop-blur-md">
       <HeaderNavigator />
 
       {/* Separator between navigation and menu */}

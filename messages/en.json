@@ -20,5 +20,9 @@
     "github": "Github",
     "phone-number": "Phone Number",
     "email": "Email"
+  },
+  "home": {
+    "its-my-website": "It's my website",
+    "description": "Passionate Full-Stack developer from Russia with 2+ years of experience marketable and high-performance applications!"
   }
 }
